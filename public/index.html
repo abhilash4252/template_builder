@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Template Builder</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/lib/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Template Builder</a>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid main-container">
+  <div class="row">
+    <div id="resizable" class="col-xs-10">
+      <div class="drop_area">
+
+      </div>
+    </div>
+    <div id="palette" class="col-xs-2">
+      <div class="row">
+        <div class="col-xs-6 movers" id="textbox">
+          <div class="content">
+            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+            <p>Text Box</p>
+          </div>
+        </div>
+        <div class="col-xs-6 movers" id="image">
+          <div class="content">
+            <i class="fa fa-picture-o" aria-hidden="true"></i>
+            <p>Image</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 movers" id="button">
+          <div class="content">
+            <i class="fa fa-link" aria-hidden="true"></i>
+            <p>Button</p>
+          </div>
+        </div>
+        <div class="col-xs-6 movers" id="header">
+          <div class="content">
+            <i class="fa fa-header" aria-hidden="true"></i>
+            <p>Header</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="image_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <label> Add URL </label>
+        <input class='image_url'> </input>
+        <input class= 'hidden image_element'></input>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id = 'image_modal_save' class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id ='text_editor' class = 'hidden'>
+  <div id="hidden-text-editor-template">
+    <div class = 'txtEditor'>
+    </div>
+  </div>
+</div>
+
+<div id ='image-insertion' class = 'hidden'>
+  <div id="hidden-image-insertion-template">
+    <div class="content">
+      <i class="fa fa-picture-o" aria-hidden="true"></i>
+      <button class="btn-primary open_image_popup" data-toggle="modal" data-target="#image_modal">
+        Add Image
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id ='button-insertion' class = 'hidden'>
+  <div id="hidden-button-insertion-template">
+    <div class = 'btnEditor content'>
+        <i class='fa fa-link' aria-hidden='true'></i>
+        <button class='btn-primary open_image_popup' data-toggle='modal' data-target='#button_modal'>
+          Add Button
+        </button>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
+<script src="js/lib/jquery-ui.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
